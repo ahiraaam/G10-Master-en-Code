@@ -1,0 +1,56 @@
+.padre{
+    width: 50%;
+    height: 450px;
+    display: flex;
+}
+.lado-izquierdo{
+    width: 35%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lado-derecho{
+    width: 65%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.lado-izquierdo-arriba{
+    height: 45%;
+    background-color: white;
+    justify-content: flex-start;
+}
+.lado-izquierdo-abajo{
+    height: 45%;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+}
+.lado-izquierdo-rojo{
+    width: 90%;
+    height: 90%;
+    background-color: red;
+}
+.lado-derecho-arriba{
+    width: 90%;
+    height: 45%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.lado-derecho-abajo{
+    width: 90%;
+    height: 45%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.lado-derecho-rojo{
+    width: 90%;
+    height: 90%;
+    background-color: red;
+}

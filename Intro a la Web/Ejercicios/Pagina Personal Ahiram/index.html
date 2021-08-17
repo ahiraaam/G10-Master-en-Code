@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--Indicamos que el lenguaje es español-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Importamos nuestras fuentes de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!--Título que aparece en la pestaña del navegador-->
+    <title>Mi página personal</title>
+</head>
+
+<body>
+    <!--Este es el header-->
+    <header>
+        <!--Etiqueta nav para nuestro menú-->
+        <nav>
+            <!--Creamos una lista con nuestras secciones-->
+            <ul>
+                <!--Cada elemento "li" esta dentro de un link "a" para llevarnos a la sección correpsondiente-->
+                <!--Este link nos lleva a la sección que tiene el ID: seccion_quien_soy-->
+                <a href="#seccion_quien_soy">
+                    <li>Quién soy</li>
+                </a>
+                <a href="#seccion_mis_hobbies">
+                    <li>Mis hobbies</li>
+                </a>
+                <a href="#seccion_mis_hobbies">
+                    <li>Mi profesión</li>
+                </a>
+                <a href="#seccion_mis_hobbies">
+                    <li>Contacto</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Ahiram Cruz Martínez</h1>
+        <!--Este es mi sección de Quien soy-->
+        <section id="seccion_quien_soy">
+            <h2>Un poco de mi</h2>
+            <p id="parrafo_letra_mas_grande">
+                <!--Usamos strong para resaltar parte del texto, nos ayuda con el SEO de la página-->
+                Hola, yo me llamo <strong>Ahiram</strong>.Tengo
+                <strong>22 años</strong>. Vivo en <strong>CDMX</strong>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero animi voluptate quas assumenda sit nesciunt quaerat doloremque optio possimus quasi consectetur laudantium, obcaecati rem. Nulla quos rerum molestiae sint.
+                Asperiores nobis voluptates soluta ducimus libero eum. Vitae fugiat iusto amet tenetur in, voluptate quisquam cupiditate, a doloremque accusamus ratione nam quia perspiciatis ea vel illo officiis magnam, quo harum!
+                Ipsa consequuntur praesentium distinctio quae ad non dicta soluta. Enim, aliquam placeat, corporis ea asperiores ipsa, fuga odit reprehenderit sunt voluptate quas consectetur hic eveniet eum aut nulla quod magnam.
+            </p>
+            <!--Esta imágen se cara directamente de internet-->
+            <img src="https://iteragrow.com/wp-content/uploads/2018/04/buyer-persona-e1545248524290.jpg"
+                alt="ahiram_internet" />
+            <!--Este div estará centrado-->
+            <div id="div-centrado">
+                <span>Este div estará centrado y tiene una imagen dentro. También padding de 30px por lado y un borde de 5px</span>
+                <!--Esta imagen se carga directamente de mi directorio local-->
+                <img src="./img/mujer.jpg" alt="ahiram_formal" />
+            </div>
+        </section>
+        <!--Esta es mi seccion de Hobbies-->
+        <section id="seccion_mis_hobbies">
+            <h2>Mis hobbies</h2>
+            <!--Agrego una lista ORDENADA para enlistas mis hobbies-->
+
+            <ol>
+                <li class="elemento-lista-hobbie">Hacer ejercicio</li>
+                <img src="./img/ejercicio.jpg">
+                <li class="elemento-lista-hobbie">Ver series</li>
+                <img src="./img/netflox.png">
+                <li class="elemento-lista-hobbie">Platicar con mis amigos</li>
+                <img src="./img/amigos.jpg">
+            </ol>
+        </section>
+        <!--Este es mi sección de Mi profesión-->
+
+        <section id="seccion_mi_profesion">
+            <h2>Mi profesión</h2>
+            <p>Actualmente soy Ingeniera en Tecnologías Computacionales y trabajo en una empresa grande de tecnología.
+                También soy sensei en DevF</p>
+            <p>Mis lenguajes de programación favoritos son:</p>
+            <!--Lista DESORDENADA de mis lenguajes favs.-->
+
+            <ul>
+                <!--Este es un link externo, es decir nos lleva a otra página de interne-->
+
+                <a href="https://www.java.com/es/">
+                    <li>Java - Este link se abre en esta página</li>
+                </a>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">
+                    <li>Javascript - Este link abre una nueva pestaña</li>
+                </a>
+                <a href="https://www.python.org/">
+                    <li>Python</li>
+                </a>
+            </ul>
+        </section>
+        <!--Este es mi sección de Contacto-->
+
+        <section id="seccion_contacto">
+            <h2>Contáctame</h2>
+            <!--La etiqueta form sirve para agregar un formulario, por el momento no hace ninguna acción-->
+
+            <form>
+                <label>
+                    <span>Email</span>
+                    <input type="text">
+                </label>
+                <label>
+                    <span>Mensaje</span>
+                    <textarea></textarea>
+                </label>
+                <!--Botón que no hace nada-->
+
+                <button>Enviar Mensaje</button>
+            </form>
+            <img src="https://i.blogs.es/759769/trucosinstagram/450_1000.jpg" alt="instagram_logo">
+            <p>Instagram - @ahiraaam</p>
+            <img src="http://www.marketing-branding.cl/wp-content/uploads/2014/02/linkedin-logo-marketingbuilding.png"
+                alt="linkedin_logo">
+            <p>LinkedIn - ahiram-cruz</p>
+        </section>
+    </main>
+    <!--Agrego un pie de página-->
+
+    <footer>
+        <p>Aquí es el pie de página @Copyright - Ahiram 2021</p>
+    </footer>
+</body>
+
+</html>

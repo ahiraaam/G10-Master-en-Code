@@ -1,0 +1,190 @@
+/* Estilos Base */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header ul{
+    list-style: none;
+    position: absolute;
+    right: 20px;
+}
+
+header ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header ul li a {
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+    vertical-align: middle;
+}
+header ul li a:hover{
+    text-decoration: underline;
+}
+
+header ul li button{
+    background: none;
+    border: 0;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+header ul li button span {
+    vertical-align: middle;
+}
+
+.btn-top:hover{
+    background-color: rgba(149, 149, 149, 0.482);
+}
+
+.btn-user{
+    background-color: #00897b;
+    color: #FFF;
+    padding:  10px;
+}
+
+/* MAIN */
+
+.center{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 250px;
+    width: 50%;
+}
+.txt-busqueda{
+    width: 90%;
+    line-height: 15px;
+    border-radius: 50px;
+    padding: 20px;
+}
+.busqueda span{
+    position: relative;
+}
+.lupa{
+    left: 5%;
+    vertical-align: middle;
+}
+.micro{
+    right: 5%;
+    vertical-align: middle;
+}
+
+/*Footer */
+
+footer{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #70757a;
+}
+footer div:first-child{
+    margin-bottom: 30px;
+    pad: 10px;
+}
+footer div ul{
+    list-style: none;
+    display: inline-block;
+}
+
+footer div ul li{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+footer div ul li a{
+    text-decoration: none;
+    color: #70757a;
+}
+
+footer div ul li a:hover{
+    text-decoration: underline;
+}
+
+.right{
+    float: right;
+}
+
+.botones{
+    margin: 30px;
+}
+
+.botones button{
+    padding: 5px;
+    background-color: #f2f2f2;
+    text-transform: capitalize;
+
+}
+.lista-movil{
+    display: none;
+}
+.lista-movil-2{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        background-color: rgb(163, 241, 255);
+    }
+    .btn-user{
+        background-color: royalblue;
+        border: none;
+        border-radius: 15px;
+    }
+    .lista-movil{
+        display: block;
+        left: 0px;
+    }
+    .lista-desktop{
+        display: none;
+    }
+    .center{
+        margin-top: 100px;
+        width: 100%;
+    }
+    .center img{
+        max-width: 50%;
+    }
+    .lupa{
+        left: 10%;
+    }
+    .micro{
+        right: 10%;
+    }
+    .txt-busqueda{
+        width: 85%;
+        padding: 10px;
+    }
+    .lista-movil-2{
+        display: block;
+        right: 10px;
+        margin-top: 10px;
+    }
+    .lista-movil-2, .lista-movil li{
+        vertical-align: middle;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        margin: 0px 10%;
+    }
+    footer div:first-child{
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,73 @@
+body{
+    background-color: aqua;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+img{
+    width: 200px;
+}
+
+section h2{
+    float: left;
+    clear: right;
+}
+.section-float img{
+    float: right;
+}
+
+section{
+    clear: both;
+}
+.div{
+    width: 200px;
+    height: 200px;
+}
+.section-divs{
+    position: relative;
+}
+#div1{
+    background-color: yellow;
+}
+#div2{
+    background-color: blue;
+    position: relative;
+    top: 50px;
+    left: 200px;
+}
+#div3{
+    background-color: red;
+    position: absolute;
+    top: 50px;
+}
+#div4{
+    height: 60px;
+    background-color: green;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+}
+#div4:hover{
+    background-color: rgba(250, 126, 112, 0.5);
+}
+#div4:active{
+    background-color: slateblue;
+}
+
+.parrafo{
+    width: 45%;
+    text-align: justify;
+    padding: 2.5%;
+}
+.imagen_parrafo{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 0px;
+}
+.seccion_parrafo{
+    margin-top: 10%;
+    position: relative;
+}

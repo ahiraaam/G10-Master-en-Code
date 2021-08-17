@@ -1,0 +1,126 @@
+/******ESTILOS GENERALES******/
+body{
+/*Todo el body tendrá el tipo de letra ROBOTO*/
+    font-family: 'Roboto', sans-serif;
+    background-color: #a8efff;
+}
+/*Todos los títulos h2 tendrán un tipo de letra Tourney*/
+h2{
+    font-family: 'Tourney', cursive;
+}
+
+h1{
+    text-align: center;
+}
+
+/*Tdas las secciones tendrán un color de fondo y un radio de 20px*/
+section{
+    background-color: #1B687A;
+    border-radius: 20px; /*Esta etiqueta sirve para "redondear" el borde*/
+}
+
+/*Todos los h2 y p su color será blanco y estarán centrados*/
+section h2, p{
+    color: white;
+    text-align: center;
+}
+/*Indicamos que los p serán rojos PERO después blancos, por lo tanto el último es el que toma CSS, es decir serán blancos*/
+p{
+    color: red;
+}
+p{
+    color: white;
+}
+/*Estilos de todos los botónes de la página*/
+button{
+    padding: 10px 30px;
+    margin: 20px 0;
+    color: blue;
+    background-color: #62DFFB;
+    border: none;
+}
+/*******ESTILOS PARA NUESTRO MENÚ********/
+
+/*Indicamos que los links (etiqueta a) no tendrán la decoración de "la línea abajo"*/
+nav a{
+    text-decoration: none;
+}
+/*Indicamos que la lista no tendrá viñetas"*/
+nav ul {
+    list-style: none;
+}
+/*Los elementos de la lista estarán en display: inline block, para que esten en una misma línea*/
+nav ul li{
+    display: inline-block;
+    margin: 0px 100px;
+    color: black;
+    font-weight: bold;
+}
+/*Cuando indicamos :hover es los estilos que aparecerán cuando el mouse esté encima del elemento*/
+nav ul li:hover{
+    color: #16D0FA;
+}
+/*Estilos del div que quisimos centrar*/
+#div-centrado{
+    width: 800px;
+    border: 5px solid black;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+#div-centrado img{
+    display: block;
+}
+
+/*******ESTILOS PARA SECCION QUIÉN SOY********/
+
+/*Imágen de cierto tamaño y con margen para que estén centradas horizontalmente*/
+#seccion_quien_soy img{
+    width: 500px;
+    margin: auto;
+}
+#parrafo_letra_mas_grande{
+    font-size: 2rem;
+}
+
+/*******ESTILOS PARA SECCION DE HOBBIES********/
+/*Los elementos con esta clase serán de otro color*/
+.elemento-lista-hobbie{
+    color: yellowgreen;
+}
+/*Estilos para centrar esta lista en específico*/
+#seccion_mis_hobbies ol{
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+/*Indicamos que las imágenes de la lista tendrán el ancho de la lista*/
+#seccion_mis_hobbies ol img{
+    width: 100%
+}
+
+/*******ESTILOS PARA CONTACTO********/
+#seccion_contacto{
+    text-align: center;
+}
+#seccion_contacto img{
+    width: 80px;
+}
+#seccion_contacto form label{
+    display: block;
+    margin: 10px;
+    color: white;
+}
+
+#seccion_contacto form label > textarea{
+    width: 400px;
+    height: 100px;
+}
+
+/*******ESTILOS PARA SECCION QUIÉN SOY********/
+/*Anteriormente habíamos dicho que los "p" tendrían color blanco pero aquí 
+queremos que sea rosa, si no especificamos tomará el color blanco*/
+footer p{
+    color: rgb(253, 25, 204);
+}
