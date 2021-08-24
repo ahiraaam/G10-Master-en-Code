@@ -9,11 +9,29 @@ function calcularFactorial(num)
     console.log(`El factorial de ${num} es = ${resultado}`);
 }
 
+
+
 var userInput = parseInt( prompt("Ingresa un numero") );
 
 if( !isNaN(userInput) )
 {
     calcularFactorial(userInput);
+}else{
+    console.log("Ingresa un numero valido");
+}
+
+
+//Ejercicio 1 funciones
+function convertirGrados(celcius)
+{
+    return (celcius * (9/5) ) + 32;
+}
+
+var userInput = parseInt( prompt("Ingresa los grados celcius") ); // a
+
+if( !isNaN(userInput) ) // isNaN(  ) == true // ! -> negar ( cuando NO es NaN )
+{
+    convertirGrados(userInput);
 }else{
     console.log("Ingresa un numero valido");
 }

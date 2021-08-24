@@ -20,14 +20,15 @@ function Division( num1,num2 )
 
 function Calculadora()
 {
-    var continuar = true;
+    var continuar = true; // flags -> banderas
+    var resultado = 0;
 
     do{
-        var operacion = prompt( " ¿Que operacion desea realizar (+,-,*,/)?" ); // a
-        var resultado = 0;
-
-        var a = parseInt(prompt("Ingresa el primero numero"));
-        var b = parseInt(prompt("Ingresa el segundo numero"));
+        var operacion = prompt( " ¿Que operacion desea realizar (+,-,*,/)?" ); // ?
+        
+        
+        var a = parseInt(prompt("Ingresa el primero numero")); //10
+        var b = parseInt(prompt("Ingresa el segundo numero")); // 50
 
         if( operacion == "+")
         {
@@ -49,3 +50,18 @@ function Calculadora()
 
     }while(continuar == true);    
 }
+
+/// poner un numero
+var num = parseInt(prompt("Ingresa el primero numero")); 
+// solcitar el operador
+var operacion = prompt( " ¿Que operacion desea realizar (+,-,*,/)?" ); 
+// segundo numero
+var num2 = parseInt(prompt("Ingresa el primero numero"));
+
+// 100
+var resultado = num1 + num2;
+
+var num3 = parseInt(prompt("Ingresa el primero numero"));
+var resultado2 = resultado / 
+//precionar igual // boton
+

@@ -1,7 +1,8 @@
 //console.log(pokemons);
-
-for (var index = 0; index < pokemons.length; index++) {
+                            //151
+for (var index = 0; index < 10; index++) {
     //const element = pokemons[index];
+                            //0+1   
     document.write(`<h1> ${index+1} - ${pokemons[index]}</h1>`);
     //document.write("<h1>" + pokemons[index] + "</h1>");
 }
