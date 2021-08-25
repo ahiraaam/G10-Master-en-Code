@@ -37,15 +37,22 @@ function login( correo, password )
         alert.classList.add("alert-danger");
         alert.textContent = "Upps!! Revisa usuario y contraseña!!"
     }
+
+    setTimeout(function(){cleanMessage()}, 3000);
 }
 
+function cleanMessage()
+{
+    let alert = document.getElementById("liveAlert");
+    alert.classList.remove("alert-danger","alert-primary");
+    alert.innerText="";
+}
 
 let  btnLogin = document.getElementById("btn-login");
 btnLogin.addEventListener("click",function()
 {
     let usuario = document.getElementById("txt-user").value;
     let password = document.getElementById("txt-pass").value;
-    console.log(usuario,password);
-    
+
     login(usuario,password);
 });
