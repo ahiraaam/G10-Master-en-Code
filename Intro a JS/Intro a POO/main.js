@@ -1,5 +1,4 @@
 // Clase Persona
-
 class Persona {
   constructor(
     nombre,
@@ -34,6 +33,13 @@ class Persona {
       return "No puedes tomar";
     }
   }
+
+  get getNombre() {
+    return this._nombre;
+  }
+  set setNombre(nombre) {
+    this._nombre = nombre;
+  }
 }
 
 const persona1 = new Persona(
@@ -55,13 +61,11 @@ const persona2 = new Persona(
   true
 );
 
-const persona3 = new Persona((_apellido = "Cruz"));
-
-//console.log(persona3);
-
-console.log(persona1);
+/*console.log(persona1);
 console.log(persona2);
 console.log(persona1._nombre, persona1.comer());
 console.log(persona2._nombre, persona2.comer());
 console.log(persona1._nombre, persona1.tomarAlcohol());
-console.log(persona2._nombre, persona2.tomarAlcohol());
+console.log(persona2._nombre, persona2.tomarAlcohol());*/
+persona1.setNombre = "Hola";
+console.log(persona1.getNombre);
