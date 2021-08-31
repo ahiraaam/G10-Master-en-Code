@@ -11,10 +11,21 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <button type="button" onclick="greenScreen()" id="verde">Verde</button>
-                <button type="button" onmouseenter="purpleScreen()" onmouseleave="whiteScreen()" id="purple">Morado</button>
-                <button type="button" onclick="pinkScreen()" id="rosa">Rosa</button>
+                <button type="button" class="btn" onclick="greenScreen()" id="verde">Verde</button>
+                <button type="button" class="btn" onmouseenter="purpleScreen()" onmouseleave="whiteScreen()" id="purple">Morado</button>
+                <button type="button" class="btn" onclick="pinkScreen()" id="rosa">Rosa</button>
+                <div class="btn" ></div>
             </div>
+        </div>
+
+        <div class="row">
+            <h1>Sumar</h1>
+            <form class="col-4" action="">
+                <input type="number" id="num1" class="form-control bg-white">
+                <input type="number" id="num2" class="form-control">
+                <input type="number" id="resultado" >
+                <button type="button" onclick="sumar()" >Sumar</button>
+            </form>
         </div>
     </main>
     <script src="./main.js" ></script>
