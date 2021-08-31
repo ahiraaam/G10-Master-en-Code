@@ -3,14 +3,14 @@ var variableGeneral = "variableGeneral"
 var nombre = "Carlos"
 
 function Casa(){
-    var variableDeCasa = "variableDeCasa"
+    let variableDeCasa = "variableDeCasa"
     var nombre = "Arnold"
-    console.log("Desde función Casa", nombre);
-    console.log("Desde funcion Casa", variableGeneral);
-    console.log("Desde funcion Casa",variableDeCasa);
+    //console.log("Desde función Casa", nombre);
+    //console.log("Desde funcion Casa", variableGeneral);
+    //console.log("Desde funcion Casa",variableDeCasa);
     function CuartoPersonal(){
         var variableHija = "variableHija"
-        console.log("Desde funcion CuartoPersonal",variableHija);
+        //console.log("Desde funcion CuartoPersonal",variableHija);
         console.log("Desde funcion CuartoPersonal",variableDeCasa);
     }
     CuartoPersonal()

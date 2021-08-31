@@ -62,6 +62,6 @@ var num2 = parseInt(prompt("Ingresa el primero numero"));
 var resultado = num1 + num2;
 
 var num3 = parseInt(prompt("Ingresa el primero numero"));
-var resultado2 = resultado / 
+var resultado2 = resultado 
 //precionar igual // boton
 
