@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -53,9 +59,19 @@
       </main>
     </div>
     <div id="seccionPrincipal">
-      <button>Ver Saldo</button>
-      <button>Meter dinero</button>
-      <button>Hacer transferencia</button>
+      <button id="btn-saldo">Ver Saldo</button>
+      <button id="btn-ingresar">Ingresar Monto</button>
+      <button id="btn-retirar">Retirar Monto</button>
+      <div id="seccionIngresarMonto">
+        <input
+          id="input-ingreso"
+          type="number"
+          placeholder="Cantidad a ingresar"
+        />
+        <button id="btn-aceptar-ingreso">Ingresar cantidad</button>
+        <p id="p-saldo-ingresado"></p>
+        <p id="p-nuevo-saldo"></p>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
