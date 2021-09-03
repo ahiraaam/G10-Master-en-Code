@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="block" id="seccionLogin">
+      <main class="container mt-3">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4">
+            <form action="">
+              <div class="mb-3">
+                <label for="txt-user" class="form-label">Usuario:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="txt-user"
+                  id="txt-user"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="txt-pass" class="form-label">Contraseña:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="txt-pass"
+                  id="txt-pass"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  name="rb-sesion"
+                  id="rb-sesion"
+                />
+                <label class="form-check-label" for="rb-sesion"
+                  >Mantener sesion abierta</label
+                >
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-login">
+                Login
+              </button>
+              <button type="button" class="btn btn-danger">Limpiar</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="seccionPrincipal">
+      <button id="btn-saldo">Ver Saldo</button>
+      <button id="btn-ingresar">Ingresar Monto</button>
+      <button id="btn-retirar">Retirar Monto</button>
+      <div id="seccionIngresarMonto">
+        <input
+          id="input-ingreso"
+          type="number"
+          placeholder="Cantidad a ingresar"
+        />
+        <button id="btn-aceptar-ingreso">Ingresar cantidad</button>
+        <p id="p-saldo-ingresado"></p>
+        <p id="p-nuevo-saldo"></p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
