@@ -11,7 +11,8 @@ class Pila {
     */
   }
   push(item) {
-    this.pila[this.contador] = item;
+    // La llave "contador" va a tener como valor el item
+    this.pila[this.contador] = item; //{contador:item}
     this.contador++;
     return this.pila;
   }
@@ -24,6 +25,7 @@ class Pila {
     //Regresamos el elemento
     return item;
   }
+  //TO-DO: peek, print, size
 }
 
 const pilaObjetos = new Pila();
