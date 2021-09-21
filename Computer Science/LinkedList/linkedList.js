@@ -6,6 +6,7 @@ class Node {
     this.next = null; //Nos va a indicar el nodo siguiente
   }
 }
+
 // Clase de Lista
 // Métodos:
 // -agregar un nodo (al inicio y al final)
@@ -28,7 +29,23 @@ class LinkedList {
       node.next = this.head; //este nuevo nodo apunta a la cabeza
       this.head = node; // cabeza ahora es este nodo
     }
+    this.length++;
   }
+  //Agregar nodo al final
+  addNodeEnd(data) {
+    const node = new Node(data);
+    if (this.head == null) {
+      this.head = node;
+    } else {
+      let currentNode = this.head;
+      while (currentNode.next) {
+        currentNode = currentNode.next;
+      }
+      currentNode.next = node;
+    }
+    this.length++;
+  }
+  //Eliminar un nodo por su dato
   delete(data) {
     let currentNode = this.head;
     let auxNode = null; //nos ayuda a almacenar el nodo a reconectar
@@ -42,6 +59,21 @@ class LinkedList {
       auxNode.next = currentNode.next; //Adrian
     }
   }
+  //Obtener un nodo por su index
+  getNode(index) {
+    if (this.head === null || index > this.length) {
+      return null;
+    } else {
+      let counter = 0;
+      let currentNode = this.head;
+      while (counter !== index) {
+        counter++;
+        currentNode = currentNode.next;
+      }
+      return currentNode;
+    }
+  }
+  //Imprimir la lista
   print() {
     let currentNode = this.head;
     while (currentNode !== null) {
@@ -49,14 +81,12 @@ class LinkedList {
       currentNode = currentNode.next;
     }
   }
-
-  //TO-DO: addNodeEnd, searchNode
 }
 
 const listaDePersonas = new LinkedList();
 listaDePersonas.addNodeStart("Adrian");
 listaDePersonas.addNodeStart("Arnold");
 listaDePersonas.addNodeStart("Merly");
+listaDePersonas.addNodeStart("Ahiram");
 listaDePersonas.print();
-listaDePersonas.delete("dsf");
-console.log(listaDePersonas);
+console.log(listaDePersonas.getNode(10));
