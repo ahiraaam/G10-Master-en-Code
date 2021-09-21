@@ -29,4 +29,34 @@ class LinkedList {
       this.head = node; // cabeza ahora es este nodo
     }
   }
+  delete(data) {
+    let currentNode = this.head;
+    let auxNode = null; //nos ayuda a almacenar el nodo a reconectar
+    if (currentNode.data === data) {
+      this.head = currentNode.next;
+    } else {
+      while (currentNode.data !== data && currentNode.next !== null) {
+        auxNode = currentNode; // guardar el nodoActual por si se ocupa
+        currentNode = currentNode.next;
+      } //auxNode= Arnold ; currentNode = Adrian
+      auxNode.next = currentNode.next; //Adrian
+    }
+  }
+  print() {
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      console.log(currentNode); //40 , 20
+      currentNode = currentNode.next;
+    }
+  }
+
+  //TO-DO: addNodeEnd, searchNode
 }
+
+const listaDePersonas = new LinkedList();
+listaDePersonas.addNodeStart("Adrian");
+listaDePersonas.addNodeStart("Arnold");
+listaDePersonas.addNodeStart("Merly");
+listaDePersonas.print();
+listaDePersonas.delete("dsf");
+console.log(listaDePersonas);
