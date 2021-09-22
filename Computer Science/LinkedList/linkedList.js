@@ -38,7 +38,7 @@ class LinkedList {
       this.head = node;
     } else {
       let currentNode = this.head;
-      while (currentNode.next) {
+      while (currentNode.next !== null) {
         currentNode = currentNode.next;
       }
       currentNode.next = node;
@@ -61,6 +61,7 @@ class LinkedList {
   }
   //Obtener un nodo por su index
   getNode(index) {
+    //getIndex(2)
     if (this.head === null || index > this.length) {
       return null;
     } else {
@@ -84,9 +85,9 @@ class LinkedList {
 }
 
 const listaDePersonas = new LinkedList();
-listaDePersonas.addNodeStart("Adrian");
-listaDePersonas.addNodeStart("Arnold");
-listaDePersonas.addNodeStart("Merly");
-listaDePersonas.addNodeStart("Ahiram");
+listaDePersonas.addNodeEnd("Adrian");
+listaDePersonas.addNodeEnd("Arnold");
+listaDePersonas.addNodeEnd("Merly");
+listaDePersonas.addNodeEnd("Ahiram");
 listaDePersonas.print();
-console.log(listaDePersonas.getNode(10));
+console.log(listaDePersonas.getNode(2));
