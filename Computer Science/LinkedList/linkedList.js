@@ -45,6 +45,24 @@ class LinkedList {
     }
     this.length++;
   }
+  //Agregar nodo en una posicion en específico
+  addNodeByIndex(data, index) {
+    const node = new Node(data);
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      let counter = 0;
+      let currentNode = this.head;
+      let auxNode = null;
+      while (counter !== index) {
+        counter++;
+        auxNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      auxNode.next = node;
+      node.next = currentNode;
+    }
+  }
   //Eliminar un nodo por su dato
   delete(data) {
     let currentNode = this.head;
@@ -85,9 +103,10 @@ class LinkedList {
 }
 
 const listaDePersonas = new LinkedList();
-listaDePersonas.addNodeEnd("Adrian");
-listaDePersonas.addNodeEnd("Arnold");
-listaDePersonas.addNodeEnd("Merly");
-listaDePersonas.addNodeEnd("Ahiram");
+listaDePersonas.addNodeStart("Adrian");
+listaDePersonas.addNodeStart("Arnold");
+listaDePersonas.addNodeStart("Merly");
+listaDePersonas.addNodeStart("Ahiram");
 listaDePersonas.print();
+listaDePersonas.addNodeByIndex("Carlos", 3);
 console.log(listaDePersonas.getNode(2));
