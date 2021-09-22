@@ -47,7 +47,7 @@ class Colas{ // FIFO: First IN First Out
 
 }
 
-
+/*
 const colaAlumnos = new Colas();
 
 console.log(colaAlumnos.isEmpty());
@@ -84,3 +84,4 @@ console.log(colaAlumnos.back()); // ahiram
 
 colaAlumnos.print();
 console.log(colaAlumnos.size());
+*/
