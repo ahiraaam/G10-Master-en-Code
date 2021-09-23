@@ -38,12 +38,30 @@ class LinkedList {
       this.head = node;
     } else {
       let currentNode = this.head;
-      while (currentNode.next) {
+      while (currentNode.next !== null) {
         currentNode = currentNode.next;
       }
       currentNode.next = node;
     }
     this.length++;
+  }
+  //Agregar nodo en una posicion en específico
+  addNodeByIndex(data, index) {
+    const node = new Node(data);
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      let counter = 0;
+      let currentNode = this.head;
+      let auxNode = null;
+      while (counter !== index) {
+        counter++;
+        auxNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      auxNode.next = node;
+      node.next = currentNode;
+    }
   }
   //Eliminar un nodo por su dato
   delete(data) { // C
@@ -66,6 +84,7 @@ class LinkedList {
   }
   //Obtener un nodo por su index
   getNode(index) {
+    //getIndex(2)
     if (this.head === null || index > this.length) {
       return null;
     } else {
@@ -119,6 +138,7 @@ listaDePersonas.addNodeStart("Arnold");
 listaDePersonas.addNodeStart("Merly");
 listaDePersonas.addNodeStart("Ahiram");
 listaDePersonas.print();
+<<<<<<< HEAD
 console.log(listaDePersonas.getNode(10));
 */
 
@@ -143,3 +163,7 @@ linkedList.print();
  linkedList.addNodeEndByData("CARLOS");
 
  linkedList.print();
+=======
+listaDePersonas.addNodeByIndex("Carlos", 3);
+console.log(listaDePersonas.getNode(2));
+>>>>>>> 0dbd80cae2ce6308d511dcfda52089b4496a3a7d
