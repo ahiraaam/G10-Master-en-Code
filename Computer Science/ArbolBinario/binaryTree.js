@@ -64,6 +64,34 @@ class Tree{
             }
         }
     }
+
+    contains( data )
+    {
+        // asignamos currentNode desde root
+        let currentNode = this.root;
+
+        //validar que currentNode no sea null
+        while( currentNode !== null )
+        {
+            // organiza numeros izquierda menores / derecha mayores
+            if( data === currentNode.data  )
+            {
+                return true;
+            }else
+            {
+                if ( data < currentNode.data )
+                {
+                    console.log("AVANZA POR LA IZQUIERDA");
+                    currentNode = currentNode.left;
+                }else{
+                    console.log("AVANZA POR LA DERECHA");
+                    currentNode = currentNode.right;
+                }
+            }
+        }
+
+        return false;
+    }
 }
 
 
@@ -75,3 +103,7 @@ arbol.add(20);
 arbol.add(65);
 
 console.log(arbol);
+
+console.log(arbol.contains(65));
+console.log(arbol.contains(20));
+console.log(arbol.contains(19));
