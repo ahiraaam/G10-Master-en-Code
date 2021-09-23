@@ -46,18 +46,23 @@ class LinkedList {
     this.length++;
   }
   //Eliminar un nodo por su dato
-  delete(data) {
+  delete(data) { // C
     let currentNode = this.head;
     let auxNode = null; //nos ayuda a almacenar el nodo a reconectar
     if (currentNode.data === data) {
       this.head = currentNode.next;
     } else {
+
       while (currentNode.data !== data && currentNode.next !== null) {
         auxNode = currentNode; // guardar el nodoActual por si se ocupa
         currentNode = currentNode.next;
       } //auxNode= Arnold ; currentNode = Adrian
+
       auxNode.next = currentNode.next; //Adrian
+
     }
+
+    this.length--;
   }
   //Obtener un nodo por su index
   getNode(index) {
@@ -81,8 +86,33 @@ class LinkedList {
       currentNode = currentNode.next;
     }
   }
+
+  addNodeEndByData( data )
+  {
+    let currentNode = this.head;
+    let agregarNodo = true;
+
+    while( currentNode.next !== null ){
+      if( currentNode.data !== data )
+      {
+        currentNode = currentNode.next;
+      }else{
+        console.log("no podemos insertar un dato repetido");
+        agregarNodo = false;
+        break;
+      }
+    }
+
+    if( agregarNodo )
+    {
+      let tmpNodo = new Node(data);
+      currentNode.next = tmpNodo;
+    }
+  }
+
 }
 
+/*
 const listaDePersonas = new LinkedList();
 listaDePersonas.addNodeStart("Adrian");
 listaDePersonas.addNodeStart("Arnold");
@@ -90,3 +120,26 @@ listaDePersonas.addNodeStart("Merly");
 listaDePersonas.addNodeStart("Ahiram");
 listaDePersonas.print();
 console.log(listaDePersonas.getNode(10));
+*/
+
+/**
+ *1.- Implemente un procedimiento que inserte un dato de modo similar al insertar, 
+ al final de la lista. Pero ahora, no se debe permitir insertar datos repetidos, 
+ si un dato ya está almacenado entonces la lista no cambia.
+ */
+
+ let linkedList = new LinkedList();
+
+ linkedList.addNodeStart("AHIRAM");
+ linkedList.addNodeStart("MARTIN");
+ linkedList.addNodeStart("LUIS ROGERIO");
+ linkedList.addNodeStart("PAOLA");
+ linkedList.addNodeStart("ARNOLD");
+ linkedList.print();
+ console.log("Agregando paola..");
+ linkedList.addNodeEndByData("PAOLA");
+linkedList.print();
+ console.log("Agregando carlos..");
+ linkedList.addNodeEndByData("CARLOS");
+
+ linkedList.print();
