@@ -138,7 +138,6 @@ listaDePersonas.addNodeStart("Arnold");
 listaDePersonas.addNodeStart("Merly");
 listaDePersonas.addNodeStart("Ahiram");
 listaDePersonas.print();
-<<<<<<< HEAD
 console.log(listaDePersonas.getNode(10));
 */
 
@@ -163,7 +162,3 @@ linkedList.print();
  linkedList.addNodeEndByData("CARLOS");
 
  linkedList.print();
-=======
-listaDePersonas.addNodeByIndex("Carlos", 3);
-console.log(listaDePersonas.getNode(2));
->>>>>>> 0dbd80cae2ce6308d511dcfda52089b4496a3a7d
