@@ -75,10 +75,25 @@ const actualizarAuthor = (id,jsonInfoAutor) => {
     })
 }
 
+
+const deleteAutor = (id)=>{
+    request.delete(URI+id+'/',function(err,response,body){
+        if(response.statusCode == 204)
+        {
+            const author = JSON.parse(body);
+            console.log(author);
+        }else
+        {
+            console.log(response.statusCode, response.statusMessage);
+        }
+    })
+}
+
 // Exportar modulos commonJS
 module.exports = {
     listarAutores,
     mostrarInfoAutor,
     createAuthor,
-    actualizarAuthor
+    actualizarAuthor,
+    deleteAutor
 }

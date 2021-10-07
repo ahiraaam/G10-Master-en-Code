@@ -19,4 +19,7 @@ const jsonInfoAutor = {
 
 //authorsCrud.createAuthor(jsonInfoAutor);
 
-authorsCrud.actualizarAuthor(14558,jsonInfoAutor);
+//authorsCrud.actualizarAuthor(14558,jsonInfoAutor);
+
+
+authorsCrud.deleteAutor(14558);
