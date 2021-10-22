@@ -1,0 +1,92 @@
+body{
+    width: 200%;
+    overflow: hidden;
+    background-color: #fdfdfd;
+}
+
+main div{
+    display: inline-block;
+}
+
+.img-wrapper { 
+    width: 27%;
+    border-right: 200px solid transparent;
+    border-top:93vh solid #fff8ff;
+}
+.division { 
+    background-color: #ff4620; 
+    width: 8%;
+    transform: skew(-15deg, 0deg);
+    position: relative;
+    left: -7%;
+    height: 93vh;
+}
+.list-wrapper { 
+    width: 27%;
+    border-left: 200px solid transparent;
+    border-bottom:93vh solid #ff6b2b;
+    position: relative;
+    left: -10.5%;
+}
+
+.list-pokemon-wrapper{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 50vw;
+    top:12vh;
+    max-height: 800px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 45vw;
+}
+
+.list-pokemon-wrapper li {
+    cursor: pointer;
+}
+
+.list-pokemon-wrapper img {
+    width: 120px;
+}
+.list-pokemon-wrapper span
+{
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+.number
+{
+    width: 30%;
+}
+.name
+{
+    width: 50%;
+    text-transform: capitalize;
+}
+
+#selectImg{
+    position: absolute;
+    width: 450px;
+    top: 15vh;
+    left: 5vw;
+}
+
+#pokeball{
+    width: 32px;
+}
+
+.dataPokemon
+{
+    position: absolute;
+    top: 65vh;
+    left: 5vw;
+    font-size: 22px;
+    width: 200px;
+}
+
+#hp,#atq,#def,#satq,#sdef,#vel{
+    width: 26px;
+    font-weight: bold;
+}
