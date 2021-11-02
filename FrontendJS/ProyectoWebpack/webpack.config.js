@@ -25,7 +25,6 @@ module.exports = {
           "sass-loader", // Para estilos en scss (sass)
         ],
       },
-
       {
         test: /\.js$/, //Va a buscar todos los archivos JS en mi proyecto
         exclude: /node_modules/, //Omite la carpeta node_modules
