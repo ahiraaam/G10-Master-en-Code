@@ -34,8 +34,11 @@ export default class Header extends React.Component{
 
     render() // es lo que pintara en el navegador
     {
+        const menuOptions = this.state.menu.map( (item,i)=>{ 
+            return <a className="nav-link" key={i} href={ item.url }>{item.text}</a>
+        })
 
-  
+        console.log(menuOptions);
         return ( 
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark body-text">
                 <div className="container-fluid">
@@ -45,11 +48,7 @@ export default class Header extends React.Component{
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            { 
-                                this.state.menu.map( (item,i)=>{ 
-                                    return <a className="nav-link" key={i} href={ item.url }>{item.text}</a>
-                                } )
-                            }
+                            { menuOptions }
                         </div>
                     </div>
                 </div>
