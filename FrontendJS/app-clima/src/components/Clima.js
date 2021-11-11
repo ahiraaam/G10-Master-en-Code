@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './Clima.scss'
 export default function Clima() {
   const [datosApi, setDatosApi] = useState({}); // Se guarda la respuesta de la API
   const [valorInput, setValorInput] = useState(""); // Se guarda el valor del input
-  const [ciudad, setCiudad] = useState("Chicago"); // Se guarda la ciudad a buscar
+  const [ciudad, setCiudad] = useState("Mazatlan"); // Se guarda la ciudad a buscar
   const apiKey = process.env.REACT_APP_WEATHER_KEY;
   //console.log(apiKey);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`;
@@ -11,12 +12,14 @@ export default function Clima() {
   //Se ejecuta solo en el primer render
   //useEffect está escuchando cambios en la url
   useEffect(() => {
-    axios.get(url).then((res) => setDatosApi(res.data));
+    console.log("antes de la llamada");
+    axios.get(url).then((res) => {setDatosApi(res.data); console.log("se obtuvo info");  });
+    console.log("despues de llamar la api");
   }, [url]);
 
   // Funcion para actualizar el estado del input
   const inputHandler = (event) => {
-    console.log(event);
+    console.log(event.target.value);
     setValorInput(event.target.value); //Actualizando el estado de valorInput
     //console.log(valorInput);
   };
@@ -35,19 +38,21 @@ export default function Clima() {
           onChange={inputHandler}
           value={valorInput}
         />
-        <button onClick={submitHandler}>Buscar Clima</button>
+        <button className="text-boton" onClick={submitHandler}>Buscar Clima</button>
       </div>
       <h2>{datosApi.name}</h2>
       {datosApi.main ? (
-        <div>
-          <img
+        <div className="infoClima">
+          <img className="infoClima__imgClima"
             src={`http://openweathermap.org/img/w/${datosApi.weather[0].icon}.png`}
             alt={datosApi.weather[0].icon}
           ></img>
-          <h4> La temperatura actual es {datosApi.main.temp}</h4>
-          <p> Sensación térmica: {datosApi.main.feels_like}</p>
-          <p> Temp mínima: {datosApi.main.temp_min}</p>
-          <p> Temp máxima: {datosApi.main.temp_max}</p>
+          <ul className="infoClima__listaInfo">
+            <li>La temperatura actual es {datosApi.main.temp}</li>
+            <li>Sensación térmica : {datosApi.main.feels_like}</li>
+            <li>Temp mínima: {datosApi.main.temp_min}</li>
+            <li>Temp máxima: {datosApi.main.temp_max}</li>
+          </ul>
         </div>
       ) : (
         <h2>Cargando...</h2>
