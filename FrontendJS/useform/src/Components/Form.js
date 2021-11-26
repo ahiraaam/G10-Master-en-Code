@@ -28,7 +28,7 @@ export default function Form() {
   //Funcion que emula enviar datos a la API
   const sendData = (datos) => {
     //Toda la lógica de hacer un post
-    console.log("Datos enviados" + datos);
+    console.log("Datos enviados" + JSON.stringify(datos));
   };
 
   const { inputs, handleInput, handleSubmit } = useForm(sendData, datos); //custom hook
