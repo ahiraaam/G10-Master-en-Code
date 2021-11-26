@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useAxios from "../../hooks/useAxios";
-
+import Coin from "../../components/Navbar/Coin/Coin";
 export default function Home() {
   const [coins, setCoins] = useState([]); //guardar monedas de la API
   const [inputValue, setInputValue] = useState("");
@@ -18,6 +18,12 @@ export default function Home() {
       setCoins(response);
     }
   }, [response]);
+  //Filtrar las monedas con el input que tenemos
+  const filteredCoins =
+    coins &&
+    coins.filter((coin) =>
+      coin.name.toLowerCase().includes(inputValue.toLowerCase())
+    );
   return (
     <div>
       <h1>Home</h1>
@@ -31,11 +37,27 @@ export default function Home() {
               placeholder="Buscar"
             />
           </form>
-          {coins && (
+          {error && (
             <div>
-              {coins.map((coin) => (
-                <p>{coin.name}</p>
-              ))}
+              <p>{error.message}</p>
+            </div>
+          )}
+          {!loading && (
+            <div>
+              {filteredCoins.map((coin) => {
+                return (
+                  <Coin
+                    key={coin.id}
+                    name={coin.name}
+                    price={coin.current_price}
+                    symbol={coin.symbol}
+                    marketcap={coin.market_cap}
+                    volume={coin.total_volume}
+                    image={coin.image}
+                    priceChange={coin.price_change_percentage_24h}
+                  />
+                );
+              })}
             </div>
           )}
         </div>
