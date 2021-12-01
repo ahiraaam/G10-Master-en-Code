@@ -1,25 +1,19 @@
-import React,{ useEffect,useState } from 'react'
-import axios from 'axios';
+import React from 'react'
 
-export default function User() {
+export default function User( props ) {
 
-    const [ user,setUser ] = useState({});
-
-    useEffect( ()=>{
-        axios.get( `https://jsonplaceholder.typicode.com/users/1` )
-        .then( response => setUser(response.data) )
-    },[])
-
+    // Aqui se muestra el render de la informacion
+    console.log(props);
     return (
         <div>
             <h2>
-                {user.name} <br/>
-                {user.username} <br/>
-                {user.phone} <br/>
-                {user.website} <br/>
+                {props.user.name} <br/>
+                {props.user.username} <br/>
+                {props.user.phone} <br/>
+                {props.user.website} <br/>
             </h2>
             <span>
-                {user.email}
+                {props.user.email}
             </span>
         </div>
     )
