@@ -10,7 +10,9 @@ function App() {
 
   return (
     <>
-      <CurrentUser />
+      <CurrentUser  userId={1}/>
+      <CurrentUser  userId={2}/>
+      <CurrentUser  userId={3}/>
     </>
   );
 }

@@ -5,11 +5,11 @@ import axios from "axios";
 
 const WithUser = (ComponentUser) => {
     
-    const NewComponent = props => {
+    const NewComponent = ( { userId, ...props } ) => {
         const [ user,setUser ] = useState({});
 
         useEffect( ()=>{
-            axios.get( `https://jsonplaceholder.typicode.com/users/1` )
+            axios.get( `https://jsonplaceholder.typicode.com/users/${userId}` )
             .then( response => setUser(response.data) )
         },[])
 

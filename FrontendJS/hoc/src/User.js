@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function User( props ) {
+export default function User( props ) { // USER
 
     // Aqui se muestra el render de la informacion
     console.log(props);
