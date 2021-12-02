@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import { useUserContext } from "../../context/UserContext";
 export default function ListUsers() {
+  const context = useUserContext();
+  //Tenemos "guardado" : listUsers ,usuarioActual, setUsuarioActual
+
   return (
     <div>
-      {listaUsuarios.map((user) => (
-        <p>{user.name}</p>
+      {context.listaUsuarios.map((user) => (
+        <p key={user.id} onClick={() => context.setUsuarioActual(user)}>
+          {user.name}
+        </p>
       ))}
     </div>
   );
