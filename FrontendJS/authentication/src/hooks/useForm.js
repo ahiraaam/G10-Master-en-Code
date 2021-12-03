@@ -16,6 +16,7 @@ export default function useForm(callback, datos) {
   const handleSubmit = (event) => {
     event.preventDefault(); //Evitar el refres de la página
     callback(inputs);
+    //registerUser(inputs)
   };
 
   return {

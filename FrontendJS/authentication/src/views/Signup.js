@@ -1,8 +1,27 @@
 import React from "react";
 import useForm from "../hooks/useForm";
+import axios from "axios";
+import { useHistory } from "react-router";
 export default function Signup() {
-  const registerUser = () => {
+  const history = useHistory();
+  const registerUser = (datos) => {
     //Se hace el post a la API para registrar usuario
+    //Se puede validar que la contraseña sea igual a confirmar contraseña
+    axios
+      .post("https://ecomerce-master.herokuapp.com/api/v1/signup", datos)
+      .then((response) => {
+        if (response.status === 200) {
+          //activar la notificacion
+          //redireccionar al login
+          history.push("/login");
+        } else {
+          //tener una notificacion del error
+        }
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   const { inputs, handleInput, handleSubmit } = useForm(registerUser, {});
   return (
