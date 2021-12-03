@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         {/* <!-- LOGO --> */}
-        <div className="logo">Crypto</div>
+        <div className="logo">Tienda virtual</div>
         {/* <!-- NAVIGATION MENU --> */}
         <ul className="nav-links">
           {/* <!-- USING CHECKBOX HACK --> */}
@@ -20,31 +20,13 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/noticias">Noticias</Link>
-            </li>
-            <li className="services">
-              <Link to="/">Servicios</Link>
-              {/* <!-- DROPDOWN MENU --> */}
-              <ul className="dropdown">
-                <li>
-                  <Link to="/">Service 1 </Link>
-                </li>
-                <li>
-                  <Link to="/">Service 2</Link>
-                </li>
-                <li>
-                  <Link to="/">Service 3</Link>
-                </li>
-                <li>
-                  <Link to="/">Service 4</Link>
-                </li>
-                <li>
-                  <Link to="/">Service 5</Link>
-                </li>
-              </ul>
+              <Link to="/item">Productos</Link>
             </li>
             <li>
-              <Link to="/contacto">Contacto</Link>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Signup</Link>
             </li>
           </div>
         </ul>
