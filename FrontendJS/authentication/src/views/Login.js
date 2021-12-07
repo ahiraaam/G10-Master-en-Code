@@ -1,13 +1,18 @@
 import React from "react";
 import useForm from "../hooks/useForm";
 import axios from "axios";
+import { useHistory } from "react-router";
 export default function Login() {
+  const history = useHistory();
   const login = (datos) => {
     axios
       .post("https://ecomerce-master.herokuapp.com/api/v1/login", datos)
       .then((response) => {
         window.localStorage.setItem("token", response.data.token);
-        console.log(response.data);
+        history.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -19,7 +24,7 @@ export default function Login() {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             type="text"
@@ -30,7 +35,7 @@ export default function Login() {
           />
         </div>
         <div>
-          <label for="password">Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             id="password"
             type="password"
