@@ -10,9 +10,11 @@ import Signup from "../views/Signup";
 import Login from "../views/Login";
 import Item from "../views/Item";
 import Navbar from "../components/Navbar";
-
+import { useUserContext } from "../context/userContext";
 const Logout = () => {
   window.localStorage.removeItem("token");
+  const context = useUserContext();
+  context.setUsuarioActual();
   return <Redirect to="/" />;
 };
 
