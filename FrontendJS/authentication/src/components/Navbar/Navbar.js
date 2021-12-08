@@ -24,7 +24,7 @@ const Navbar = () => {
             {context.usuarioActual ? (
               <>
                 <li>
-                  <Link to="/">
+                  <Link to="/profile">
                     Bienvenido {context.usuarioActual.user.first_name}
                   </Link>
                 </li>
